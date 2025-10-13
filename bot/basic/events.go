@@ -53,7 +53,7 @@ type EventsListener struct {
 }
 
 // attach your event listener to the client.
-// The functions are copied when attaching, and modify on [EventListener] doesn't affect after that.
+// The functions are copied when attaching, and modify on [EventsListener] doesn't affect after that.
 func (e EventsListener) attach(p *Player) {
 	if e.GameStart != nil {
 		attachJoinGameHandler(p.c, e.GameStart)
