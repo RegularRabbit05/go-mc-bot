@@ -33,13 +33,13 @@ const (
 //DefaultSettings are the default settings of client
 var DefaultSettings = Settings{
 	Locale:             "zh_CN", // ^_^
-	ViewDistance:       15,
+	ViewDistance:       2,
 	ChatMode:           0,
 	DisplayedSkinParts: Jacket | LeftSleeve | RightSleeve | LeftPantsLeg | RightPantsLeg | Hat,
 	MainHand:           1,
 
 	EnableTextFiltering: false,
-	AllowListing:        true,
+	AllowListing:        false,
 
-	Brand: "vanilla",
+	Brand: "bot",
 }
