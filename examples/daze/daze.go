@@ -21,6 +21,7 @@ import (
 	"github.com/Tnze/go-mc/level"
 )
 
+var username = flag.String("name", "Daze", "The bot's username")
 var address = flag.String("address", "127.0.0.1", "The server address")
 var client *bot.Client
 var player *basic.Player
@@ -31,7 +32,7 @@ func main() {
 	flag.Parse()
 	//log.SetOutput(colorable.NewColorableStdout())
 	client = bot.NewClient()
-	client.Auth.Name = "Daze"
+	client.Auth.Name = *username
 	player = basic.NewPlayer(client, basic.DefaultSettings)
 	basic.EventsListener{
 		GameStart:    onGameStart,
